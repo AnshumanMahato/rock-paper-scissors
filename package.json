@@ -1,0 +1,27 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "rock paper scissor game",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass ./scss/main.scss css/style.css",
+    "watch:sass": "node-sass ./scss/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnshumanMahato/rock-paper-scissors.git"
+  },
+  "keywords": [
+    "game",
+    "rock-paper-scissor"
+  ],
+  "author": "Anshuman Mahato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnshumanMahato/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/AnshumanMahato/rock-paper-scissors#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

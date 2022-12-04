@@ -17,3 +17,4 @@
 *-template.*
 node_modules/
 design/
+package-lock.json
