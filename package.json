@@ -4,7 +4,10 @@
   "description": "rock paper scissor game",
   "main": "index.html",
   "scripts": {
-    "compile:sass": "sass ./sass/main.scss ./css/style.css",
+    "compile:sass": "sass ./sass/main.scss ./css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/iconfonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
     "watch:sass": "sass ./sass/main.scss ./css/style.css -w"
   },
   "repository": {
@@ -22,6 +25,10 @@
   },
   "homepage": "https://github.com/AnshumanMahato/rock-paper-scissors#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "concat": "^1.0.3",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.56.1"
   }
 }
