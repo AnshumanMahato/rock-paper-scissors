@@ -15,8 +15,53 @@ body {
   overflow-x: hidden;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
-  line-height: 1.7;
   color: #fef;
+}
+
+main {
+  background-image: radial-gradient(circle at top, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  width: 50%;
+  border: 2px solid hsl(217deg, 16%, 45%);
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+}
+
+h1 {
+  max-width: min-content;
+  font-size: 3.5rem;
+  line-height: 0.8;
+}
+
+.score {
+  display: flex;
+  background-color: #fff;
+  padding: 2% 7%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.score__tag {
+  color: hsl(229deg, 64%, 46%);
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+.score__value {
+  color: hsl(217deg, 16%, 45%);
+  font-size: 6rem;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

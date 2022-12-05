@@ -1,0 +1,19 @@
+main {
+    background-image: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    align-items: center;
+    // justify-content: center;
+}
+
+.header {
+    display: flex;
+    width: 50%;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+}
