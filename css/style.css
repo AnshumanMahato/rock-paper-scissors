@@ -31,10 +31,10 @@ main {
   display: flex;
   width: 50%;
   border: 2px solid hsl(217deg, 16%, 45%);
-  border-radius: 10px;
+  border-radius: 12px;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 2%;
+  padding: 1% 1.5% 1% 2%;
 }
 
 h1 {
@@ -45,13 +45,13 @@ h1 {
 
 .score {
   display: flex;
-  background-color: #fff;
+  background-color: #fef;
   padding: 2% 7%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .score__tag {
   color: hsl(229deg, 64%, 46%);

@@ -1,12 +1,12 @@
 .score {
     display: flex;
-    background-color: #fff;
+    background-color: #fef;
     padding: 2% 7%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 10px;
 
     &__tag {
         color: hsl(229, 64%, 46%);
