@@ -20,3 +20,29 @@
         line-height: 1;
     }
 }
+
+.btn {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-image: url("../images/icon-scissors.svg"), linear-gradient(#fff, #fff);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 2px 0px 2px hsl(217, 38%, 79%);
+    transform-style: preserve-3d;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 150%;
+        width: 150%;
+        background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, -10px);
+        box-shadow: inset 0px -5px 0px 1px hsl(39, 65%, 38%);
+    }
+
+}
