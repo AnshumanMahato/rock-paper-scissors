@@ -21,12 +21,20 @@
     }
 }
 
+@mixin setBtnProperties($icon, $color-primary, $color-secondary, $shadow) {
+    border: $color-secondary 1px solid;
+    background-image: url($icon);
+
+    &::after {
+        background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+        box-shadow: inset 0px -6px 0px 1px $shadow;
+    }
+}
+
 .btn {
     height: 15rem;
     width: 15rem;
-    border: hsl(39, 89%, 49%) 1px solid;
     border-radius: 50%;
-    background-image: url("../images/icon-scissors.svg");
     background-color: #e4e4e4;
     background-position: center;
     background-size: 45%;
@@ -39,13 +47,55 @@
         display: inline-block;
         height: 135%;
         width: 135%;
-        background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
         border-radius: 50%;
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, -10px);
-        box-shadow: inset 0px -6px 0px 1px #c7711e;
+    }
+
+    &--scissors {
+        @include setBtnProperties("../images/icon-rock.svg", $scissors-primary, $scissors-secondary, $scissors-shadow)
+    }
+
+    &--rock {
+        border: hsl(39, 89%, 49%) 1px solid;
+        background-image: url("../images/icon-rock.svg");
+
+        &::after {
+            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+            box-shadow: inset 0px -6px 0px 1px #c7711e;
+        }
+    }
+
+    &--paper {
+        border: hsl(39, 89%, 49%) 1px solid;
+        background-image: url("../images/icon-paper.svg");
+
+        &::after {
+            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+            box-shadow: inset 0px -6px 0px 1px #c7711e;
+        }
+    }
+
+    &--lizard {
+        border: hsl(39, 89%, 49%) 1px solid;
+        background-image: url("../images/icon-lizard.svg");
+
+        &::after {
+            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+            box-shadow: inset 0px -6px 0px 1px #c7711e;
+        }
+    }
+
+    &--spock {
+        border: hsl(39, 89%, 49%) 1px solid;
+        background-image: url("../images/icon-spock.svg");
+
+        &::after {
+            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+            box-shadow: inset 0px -6px 0px 1px #c7711e;
+        }
     }
 
 }
