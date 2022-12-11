@@ -55,47 +55,23 @@
     }
 
     &--scissors {
-        @include setBtnProperties("../images/icon-rock.svg", $scissors-primary, $scissors-secondary, $scissors-shadow)
+        @include setBtnProperties("../images/icon-scissors.svg", $scissors-primary, $scissors-secondary, $scissors-shadow)
     }
 
     &--rock {
-        border: hsl(39, 89%, 49%) 1px solid;
-        background-image: url("../images/icon-rock.svg");
-
-        &::after {
-            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-            box-shadow: inset 0px -6px 0px 1px #c7711e;
-        }
+        @include setBtnProperties("../images/icon-rock.svg", $rock-primary, $rock-secondary, $rock-shadow )
     }
 
     &--paper {
-        border: hsl(39, 89%, 49%) 1px solid;
-        background-image: url("../images/icon-paper.svg");
-
-        &::after {
-            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-            box-shadow: inset 0px -6px 0px 1px #c7711e;
-        }
+        @include setBtnProperties("../images/icon-paper.svg", $paper-primary, $paper-secondary, $paper-shadow)
     }
 
     &--lizard {
-        border: hsl(39, 89%, 49%) 1px solid;
-        background-image: url("../images/icon-lizard.svg");
-
-        &::after {
-            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-            box-shadow: inset 0px -6px 0px 1px #c7711e;
-        }
+        @include setBtnProperties("../images/icon-lizard.svg", $lizard-primary, $lizard-secondary, $lizard-shadow)
     }
 
     &--spock {
-        border: hsl(39, 89%, 49%) 1px solid;
-        background-image: url("../images/icon-spock.svg");
-
-        &::after {
-            background-image: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-            box-shadow: inset 0px -6px 0px 1px #c7711e;
-        }
+        @include setBtnProperties("../images/icon-spock.svg", $spock-primary, $spock-secondary, $spock-shadow)
     }
 
 }
