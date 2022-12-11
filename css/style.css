@@ -37,6 +37,15 @@ main {
   padding: 1% 1.5% 1% 2%;
 }
 
+.game {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.game > div {
+  margin: 5%;
+}
+
 h1 {
   max-width: min-content;
   font-size: 3.5rem;
@@ -67,14 +76,12 @@ h1 {
 .btn {
   height: 15rem;
   width: 15rem;
-  border: hsl(39deg, 89%, 49%) 1px solid;
   border-radius: 50%;
-  background-image: url("../images/icon-scissors.svg");
   background-color: #e4e4e4;
   background-position: center;
   background-size: 45%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 2px 2px #bac0d3;
+  box-shadow: inset 0px 6px 1px 1px #bac0d3;
   transform-style: preserve-3d;
 }
 .btn::after {
@@ -82,13 +89,51 @@ h1 {
   display: inline-block;
   height: 135%;
   width: 135%;
-  background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
   border-radius: 50%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, -10px);
-  box-shadow: inset 0px -6px 0px 1px #c7711e;
+}
+.btn--scissors {
+  border: hsl(39deg, 89%, 49%) 1px solid;
+  background-image: url("../images/icon-scissors.svg");
+}
+.btn--scissors::after {
+  background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
+  box-shadow: inset 0px -6px 1px 1px hsl(28deg, 71%, 45%);
+}
+.btn--rock {
+  border: hsl(349deg, 71%, 52%) 1px solid;
+  background-image: url("../images/icon-rock.svg");
+}
+.btn--rock::after {
+  background-image: linear-gradient(to bottom, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
+  box-shadow: inset 0px -6px 1px 1px hsl(348deg, 80%, 37%);
+}
+.btn--paper {
+  border: hsl(230deg, 89%, 62%) 1px solid;
+  background-image: url("../images/icon-paper.svg");
+}
+.btn--paper::after {
+  background-image: linear-gradient(to bottom, hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
+  box-shadow: inset 0px -6px 1px 1px hsl(228deg, 63%, 45%);
+}
+.btn--lizard {
+  border: hsl(261deg, 73%, 60%) 1px solid;
+  background-image: url("../images/icon-lizard.svg");
+}
+.btn--lizard::after {
+  background-image: linear-gradient(to bottom, hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
+  box-shadow: inset 0px -6px 1px 1px hsl(261deg, 51%, 44%);
+}
+.btn--spock {
+  border: hsl(189deg, 59%, 53%) 1px solid;
+  background-image: url("../images/icon-spock.svg");
+}
+.btn--spock::after {
+  background-image: linear-gradient(to bottom, hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
+  box-shadow: inset 0px -6px 1px 1px hsl(195deg, 58%, 43%);
 }
 
 /*# sourceMappingURL=style.css.map */

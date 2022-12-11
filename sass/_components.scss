@@ -27,7 +27,7 @@
 
     &::after {
         background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
-        box-shadow: inset 0px -6px 0px 1px $shadow;
+        box-shadow: inset 0px -6px 1px 1px $shadow;
     }
 }
 
@@ -39,7 +39,7 @@
     background-position: center;
     background-size: 45%;
     background-repeat: no-repeat;
-    box-shadow: inset 0px 6px 2px 2px #bac0d3;
+    box-shadow: inset 0px 6px 1px 1px #bac0d3;
     transform-style: preserve-3d;
 
     &::after {
