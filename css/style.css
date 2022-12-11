@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
-  color: #fef;
+  color: #fff;
 }
 
 main {
@@ -45,7 +45,7 @@ h1 {
 
 .score {
   display: flex;
-  background-color: #fef;
+  background-color: #fbfbfb;
   padding: 2% 7%;
   flex-direction: column;
   justify-content: center;
@@ -65,27 +65,30 @@ h1 {
 }
 
 .btn {
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
+  border: hsl(39deg, 89%, 49%) 1px solid;
   border-radius: 50%;
-  background-image: url("../images/icon-scissors.svg"), linear-gradient(#fff, #fff);
+  background-image: url("../images/icon-scissors.svg");
+  background-color: #e4e4e4;
   background-position: center;
+  background-size: 45%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 2px 0px 2px hsl(217deg, 38%, 79%);
+  box-shadow: inset 0px 6px 2px 2px #bac0d3;
   transform-style: preserve-3d;
 }
 .btn::after {
   content: "";
   display: inline-block;
-  height: 150%;
-  width: 150%;
-  background-image: linear-gradient(hsl(39deg, 89%, 49%), hsl(40deg, 84%, 53%));
+  height: 135%;
+  width: 135%;
+  background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
   border-radius: 50%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, -10px);
-  box-shadow: inset 0px -5px 0px 1px hsl(39deg, 65%, 38%);
+  box-shadow: inset 0px -6px 0px 1px #c7711e;
 }
 
 /*# sourceMappingURL=style.css.map */
