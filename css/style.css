@@ -38,6 +38,10 @@ main {
 }
 
 .game {
+  padding: 5rem 0;
+}
+
+.selection-window {
   margin: 10rem 0 7.5rem;
   background-image: url("../images/bg-pentagon.svg");
   width: 27rem;
@@ -47,41 +51,80 @@ main {
   background-size: 100%;
   position: relative;
 }
-.game > .btn {
+.selection-window > .btn {
   position: absolute;
   width: 33%;
   height: 33%;
 }
-.game > .btn--scissors {
+.selection-window > .btn--scissors {
   top: 2.5%;
   left: 50%;
   transform: translate(-50%, -45%);
 }
-.game > .btn--rock {
+.selection-window > .btn--rock {
   top: 95%;
   right: 20%;
   transform: translate(50%, -50%);
 }
-.game > .btn--lizard {
+.selection-window > .btn--lizard {
   top: 95%;
   left: 20%;
   transform: translate(-50%, -50%);
 }
-.game > .btn--spock {
+.selection-window > .btn--spock {
   top: 40%;
   left: 0;
   transform: translate(-50%, -50%);
 }
-.game > .btn--paper {
+.selection-window > .btn--paper {
   top: 40%;
   right: 0;
   transform: translate(50%, -50%);
+}
+
+.result-window {
+  display: grid;
+  text-align: center;
+}
+
+.result-pending {
+  grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
+  grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+}
+
+.title--player {
+  grid-column: player-choice-start/player-choice-end;
+}
+
+.title--opponent {
+  grid-column: opponent-choice-start/opponent-choice-end;
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 7rem;
+}
+.choice__player {
+  grid-column: player-choice-start/player-choice-end;
+  grid-row: choice-start/choice-end;
+}
+.choice__opponent {
+  grid-column: opponent-choice-start/opponent-choice-end;
+  grid-row: choice-start/choice-end;
 }
 
 h1 {
   max-width: min-content;
   font-size: 2.5rem;
   line-height: 0.8;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
 }
 
 .score {
@@ -105,8 +148,8 @@ h1 {
 }
 
 .btn {
-  height: 15rem;
-  width: 15rem;
+  height: 17rem;
+  width: 17rem;
   border-radius: 50%;
   transform-style: preserve-3d;
   background-color: hsla(238deg, 48%, 15%, 0.501);
@@ -126,6 +169,7 @@ h1 {
   transform: translate3d(-50%, -50%, -10px);
 }
 .btn::before {
+  visibility: hidden;
   height: 100%;
   width: 100%;
   transform: translate3d(-50%, -50%, -20px);
@@ -139,11 +183,11 @@ h1 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 1px 1px #bac0d3;
+  box-shadow: inset 0px 10px 1px -1px #bac0d3;
 }
 .btn--scissors::after {
   background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
-  box-shadow: inset 0px -6px 1px 1px hsl(28deg, 71%, 45%);
+  box-shadow: inset 0px -10px 1px -1px hsl(28deg, 71%, 45%);
 }
 .btn--rock {
   border: hsl(349deg, 71%, 52%) 1px solid;
@@ -152,11 +196,11 @@ h1 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 1px 1px #bac0d3;
+  box-shadow: inset 0px 10px 1px -1px #bac0d3;
 }
 .btn--rock::after {
   background-image: linear-gradient(to bottom, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
-  box-shadow: inset 0px -6px 1px 1px hsl(348deg, 80%, 37%);
+  box-shadow: inset 0px -10px 1px -1px hsl(348deg, 80%, 37%);
 }
 .btn--paper {
   border: hsl(230deg, 89%, 62%) 1px solid;
@@ -165,11 +209,11 @@ h1 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 1px 1px #bac0d3;
+  box-shadow: inset 0px 10px 1px -1px #bac0d3;
 }
 .btn--paper::after {
   background-image: linear-gradient(to bottom, hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
-  box-shadow: inset 0px -6px 1px 1px hsl(228deg, 63%, 45%);
+  box-shadow: inset 0px -10px 1px -1px hsl(228deg, 63%, 45%);
 }
 .btn--lizard {
   border: hsl(261deg, 73%, 60%) 1px solid;
@@ -178,11 +222,11 @@ h1 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 1px 1px #bac0d3;
+  box-shadow: inset 0px 10px 1px -1px #bac0d3;
 }
 .btn--lizard::after {
   background-image: linear-gradient(to bottom, hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
-  box-shadow: inset 0px -6px 1px 1px hsl(261deg, 51%, 44%);
+  box-shadow: inset 0px -10px 1px -1px hsl(261deg, 51%, 44%);
 }
 .btn--spock {
   border: hsl(189deg, 59%, 53%) 1px solid;
@@ -191,14 +235,15 @@ h1 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 6px 1px 1px #bac0d3;
+  box-shadow: inset 0px 10px 1px -1px #bac0d3;
 }
 .btn--spock::after {
   background-image: linear-gradient(to bottom, hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
-  box-shadow: inset 0px -6px 1px 1px hsl(195deg, 58%, 43%);
+  box-shadow: inset 0px -10px 1px -1px hsl(195deg, 58%, 43%);
 }
 
-.game > .btn:hover::before {
+.selection-window > .btn:hover::before {
+  visibility: visible;
   height: 200%;
   width: 200%;
 }
