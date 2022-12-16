@@ -23,11 +23,24 @@
       </div>
     </div>
     <div class="game">
-      <div class="btn btn--rock"></div>
-      <div class="btn btn--paper"></div>
-      <div class="btn btn--scissors"></div>
-      <div class="btn btn--lizard"></div>
-      <div class="btn btn--spock"></div>
+      <div class="selection-window" style="display: none;">
+        <div class="btn btn--rock"></div>
+        <div class="btn btn--paper"></div>
+        <div class="btn btn--scissors"></div>
+        <div class="btn btn--lizard"></div>
+        <div class="btn btn--spock"></div>
+      </div>
+      <div class="result-window result-pending">
+        <h2 class="title--player">YOU PICKED</h2>
+        <h2 class="title--opponent">THE HOUSE PICKED</h2>
+        <div class="choice choice__player">
+          <div class="btn btn--lizard"></div>
+        </div>
+        <div class="choice choice__opponent">
+          <div class="btn"></div>
+        </div>
+        <div class="result" style="display: none;"></div>
+      </div>
       <!-- <div class="btn"></div> -->
     </div>
   </main>
