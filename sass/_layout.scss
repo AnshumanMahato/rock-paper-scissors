@@ -18,6 +18,10 @@ main {
 }
 
 .game {
+    padding: 5rem 0;
+}
+
+.selection-window {
     margin: 10rem 0 7.5rem;
     background-image: url("../images/bg-pentagon.svg");
     width: 27rem;
@@ -63,4 +67,39 @@ main {
         }
     }
 
+}
+
+.result-window {
+    display: grid;
+    text-align: center;
+}
+
+.result-pending {
+    grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
+    grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+}
+
+.title--player {
+    grid-column: player-choice-start/player-choice-end;
+}
+
+.title--opponent {
+    grid-column: opponent-choice-start/opponent-choice-end;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 7rem;
+
+    &__player {
+        grid-column: player-choice-start/player-choice-end;
+        grid-row: choice-start/choice-end;
+    }
+
+    &__opponent {
+        grid-column: opponent-choice-start/opponent-choice-end;
+        grid-row: choice-start/choice-end;
+    }
 }
