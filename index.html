@@ -24,24 +24,26 @@
     </div>
     <div class="game">
       <div class="selection-window" style="display: none;">
-        <div class="btn btn--rock"></div>
-        <div class="btn btn--paper"></div>
-        <div class="btn btn--scissors"></div>
-        <div class="btn btn--lizard"></div>
-        <div class="btn btn--spock"></div>
+        <div class="chip chip--rock"></div>
+        <div class="chip chip--paper"></div>
+        <div class="chip chip--scissors"></div>
+        <div class="chip chip--lizard"></div>
+        <div class="chip chip--spock"></div>
       </div>
-      <div class="result-window result-pending">
+      <div class="result-window result-declared">
         <h2 class="title--player">YOU PICKED</h2>
         <h2 class="title--opponent">THE HOUSE PICKED</h2>
         <div class="choice choice__player">
-          <div class="btn btn--lizard"></div>
+          <div class="chip chip--scissors"></div>
         </div>
         <div class="choice choice__opponent">
-          <div class="btn"></div>
+          <div class="chip chip--spock"></div>
         </div>
-        <div class="result" style="display: none;"></div>
+        <div class="result">
+          <span>YOU LOSE</span>
+          <button class="btn--play-again">PLAY AGAIN</button>
+        </div>
       </div>
-      <!-- <div class="btn"></div> -->
     </div>
   </main>
 </body>
