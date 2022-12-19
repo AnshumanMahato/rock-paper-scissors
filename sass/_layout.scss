@@ -5,11 +5,12 @@ body {
     padding: 3%;
     align-items: center;
     // justify-content: center;
+    position: relative;
 }
 
 .header {
     display: flex;
-    width: 55%;
+    width: 52%;
     border: 2px solid hsl(217, 16%, 45%);
     border-radius: 12px;
     justify-content: space-between;
@@ -81,7 +82,7 @@ body {
 }
 
 .result-declared {
-    grid-template-columns: [player-choice-start] 1fr [player-choice-end result-start] 1fr [result-end opponent-choice-start] 1fr [opponent-choice-end];
+    grid-template-columns: [player-choice-start] 1fr [player-choice-end result-start] max-content [result-end opponent-choice-start] 1fr [opponent-choice-end];
     grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
     gap: 7rem 9rem;
 }
