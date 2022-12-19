@@ -18,7 +18,7 @@ body {
 }
 
 .game {
-    padding: 8rem 0;
+    padding: 7rem 0;
 }
 
 .selection-window {
@@ -77,11 +77,13 @@ body {
 .result-pending {
     grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
     grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+    column-gap: 5rem;
 }
 
 .result-declared {
     grid-template-columns: [player-choice-start] 1fr [player-choice-end result-start] 1fr [result-end opponent-choice-start] 1fr [opponent-choice-end];
     grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+    gap: 7rem 9rem;
 }
 
 .title--player {
@@ -96,7 +98,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5rem;
+    // margin: 5rem;
 
     &__player {
         grid-column: player-choice-start/player-choice-end;

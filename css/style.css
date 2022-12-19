@@ -38,7 +38,7 @@ body {
 }
 
 .game {
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 
 .selection-window {
@@ -90,11 +90,13 @@ body {
 .result-pending {
   grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
   grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+  column-gap: 5rem;
 }
 
 .result-declared {
   grid-template-columns: [player-choice-start] 1fr [player-choice-end result-start] 1fr [result-end opponent-choice-start] 1fr [opponent-choice-end];
   grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
+  gap: 7rem 9rem;
 }
 
 .title--player {
@@ -109,7 +111,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem;
 }
 .choice__player {
   grid-column: player-choice-start/player-choice-end;
@@ -135,21 +136,21 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
-  letter-spacing: 3px;
+  font-size: 2.2rem;
+  letter-spacing: 4px;
 }
 
 .result span {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
 .result button {
   font-family: inherit;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: hsl(229deg, 64%, 46%);
+  color: hsl(229deg, 25%, 31%);
 }
 
 .score {
@@ -173,8 +174,8 @@ h2 {
 }
 
 .chip {
-  height: 17rem;
-  width: 17rem;
+  height: 22rem;
+  width: 22rem;
   border-radius: 50%;
   transform-style: preserve-3d;
   background-color: hsla(238deg, 48%, 15%, 0.501);
@@ -208,11 +209,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 1px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--scissors::after {
   background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
-  box-shadow: inset 0px -10px 1px -1px hsl(28deg, 71%, 45%);
+  box-shadow: inset 0px -10px 0 1px hsl(28deg, 71%, 45%);
 }
 .chip--rock {
   border: hsl(349deg, 71%, 52%) 1px solid;
@@ -221,11 +222,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 1px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--rock::after {
   background-image: linear-gradient(to bottom, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
-  box-shadow: inset 0px -10px 1px -1px hsl(348deg, 80%, 37%);
+  box-shadow: inset 0px -10px 0 1px hsl(348deg, 80%, 37%);
 }
 .chip--paper {
   border: hsl(230deg, 89%, 62%) 1px solid;
@@ -234,11 +235,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 1px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--paper::after {
   background-image: linear-gradient(to bottom, hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
-  box-shadow: inset 0px -10px 1px -1px hsl(228deg, 63%, 45%);
+  box-shadow: inset 0px -10px 0 1px hsl(228deg, 63%, 45%);
 }
 .chip--lizard {
   border: hsl(261deg, 73%, 60%) 1px solid;
@@ -247,11 +248,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 1px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--lizard::after {
   background-image: linear-gradient(to bottom, hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
-  box-shadow: inset 0px -10px 1px -1px hsl(261deg, 51%, 44%);
+  box-shadow: inset 0px -10px 0 1px hsl(261deg, 51%, 44%);
 }
 .chip--spock {
   border: hsl(189deg, 59%, 53%) 1px solid;
@@ -260,11 +261,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 1px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--spock::after {
   background-image: linear-gradient(to bottom, hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
-  box-shadow: inset 0px -10px 1px -1px hsl(195deg, 58%, 43%);
+  box-shadow: inset 0px -10px 0 1px hsl(195deg, 58%, 43%);
 }
 
 .selection-window > .chip:hover::before {
@@ -274,11 +275,11 @@ h2 {
 }
 
 .btn--play-again {
-  margin: 5% 0;
+  margin: 7% 0;
   border: none;
   display: inline-block;
-  padding: 5% 20%;
-  border-radius: 5px;
+  padding: 7% 25%;
+  border-radius: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -21,31 +21,30 @@
       <span class="score__value">12</span>
     </div>
   </header>
-  <main>
-    <div class="game">
-      <div class="selection-window" style="display: none;">
-        <div class="chip chip--rock"></div>
-        <div class="chip chip--paper"></div>
+  <section class="game">
+    <div class="selection-window" style="display: none;">
+      <div class="chip chip--rock"></div>
+      <div class="chip chip--paper"></div>
+      <div class="chip chip--scissors"></div>
+      <div class="chip chip--lizard"></div>
+      <div class="chip chip--spock"></div>
+    </div>
+    <div class="result-window result-declared">
+      <h2 class="title--player">YOU PICKED</h2>
+      <h2 class="title--opponent">THE HOUSE PICKED</h2>
+      <div class="choice choice__player">
         <div class="chip chip--scissors"></div>
-        <div class="chip chip--lizard"></div>
+      </div>
+      <div class="choice choice__opponent">
         <div class="chip chip--spock"></div>
       </div>
-      <div class="result-window result-declared">
-        <h2 class="title--player">YOU PICKED</h2>
-        <h2 class="title--opponent">THE HOUSE PICKED</h2>
-        <div class="choice choice__player">
-          <div class="chip chip--scissors"></div>
-        </div>
-        <div class="choice choice__opponent">
-          <div class="chip chip--spock"></div>
-        </div>
-        <div class="result">
-          <span>YOU LOSE</span>
-          <button class="btn--play-again">PLAY AGAIN</button>
-        </div>
+      <div class="result">
+        <span>YOU LOSE</span>
+        <button class="btn--play-again">PLAY AGAIN</button>
       </div>
     </div>
-  </main>
+  </section>
+
 </body>
 
 </html>
