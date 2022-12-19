@@ -1,4 +1,4 @@
-main {
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@ main {
 
 .header {
     display: flex;
-    width: 50%;
+    width: 55%;
     border: 2px solid hsl(217, 16%, 45%);
     border-radius: 12px;
     justify-content: space-between;
