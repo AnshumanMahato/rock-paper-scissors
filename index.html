@@ -30,22 +30,34 @@
       <div class="chip chip--spock"></div>
     </div>
     <div class="result-window result-declared">
-      <h2 class="title--player">YOU PICKED</h2>
-      <h2 class="title--opponent">THE HOUSE PICKED</h2>
-      <div class="choice choice__player">
-        <div class="chip chip--scissors"></div>
+      <h3 class="title--player">YOU PICKED</h2>
+        <h3 class="title--opponent">THE HOUSE PICKED</h2>
+          <div class="choice choice__player">
+            <div class="chip chip--scissors"></div>
+          </div>
+          <div class="choice choice__opponent">
+            <div class="chip chip--spock"></div>
+          </div>
+          <div class="result">
+            <span>YOU LOSE</span>
+            <button class="btn--play-again">PLAY AGAIN</button>
+          </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <a href="#rules" class="btn--rules">RULES</a>
+  </footer>
+  <div class="popup" id="rules">
+    <div class="popup__content">
+      <div class="popup__header">
+        <h2>RULES</h2>
+        <a href="#"><img src="./images/icon-close.svg" alt="close"></a>
       </div>
-      <div class="choice choice__opponent">
-        <div class="chip chip--spock"></div>
-      </div>
-      <div class="result">
-        <span>YOU LOSE</span>
-        <button class="btn--play-again">PLAY AGAIN</button>
+      <div class="rules">
+        <img src="./images/image-rules-bonus.svg" alt="rules">
       </div>
     </div>
-    <a href="#rules" class="btn--rules">RULES</a>
-  </section>
-
+  </div>
 </body>
 
 </html>

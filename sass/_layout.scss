@@ -5,7 +5,6 @@ body {
     padding: 3%;
     align-items: center;
     // justify-content: center;
-    position: relative;
 }
 
 .header {
@@ -19,7 +18,8 @@ body {
 }
 
 .game {
-    padding: 7rem 0;
+    margin: 7rem 0;
+    text-align: center;
 }
 
 .selection-window {
@@ -78,7 +78,8 @@ body {
 .result-pending {
     grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
     grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
-    column-gap: 5rem;
+    gap: 7rem 15rem;
+    // column-gap: 5rem;
 }
 
 .result-declared {
@@ -117,4 +118,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }

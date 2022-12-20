@@ -25,7 +25,6 @@ body {
   flex-direction: column;
   padding: 3%;
   align-items: center;
-  position: relative;
 }
 
 .header {
@@ -39,7 +38,8 @@ body {
 }
 
 .game {
-  padding: 7rem 0;
+  margin: 7rem 0;
+  text-align: center;
 }
 
 .selection-window {
@@ -91,7 +91,7 @@ body {
 .result-pending {
   grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
   grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
-  column-gap: 5rem;
+  gap: 7rem 15rem;
 }
 
 .result-declared {
@@ -129,6 +129,12 @@ body {
   align-items: center;
 }
 
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 h1 {
   max-width: min-content;
   font-size: 2.5rem;
@@ -137,8 +143,13 @@ h1 {
 }
 
 h2 {
+  color: hsl(229deg, 25%, 31%);
+  font-size: 3rem;
+}
+
+h3 {
   font-size: 2.2rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .result span {
@@ -175,8 +186,8 @@ h2 {
 }
 
 .chip {
-  height: 23rem;
-  width: 23rem;
+  height: 16.5vw;
+  width: 16.5vw;
   border-radius: 50%;
   transform-style: preserve-3d;
   background-color: hsla(238deg, 48%, 15%, 0.501);
@@ -210,11 +221,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 0px 1px #bac0d3;
+  box-shadow: inset 0px 10px 0px -1px #bac0d3;
 }
 .chip--scissors::after {
   background-image: linear-gradient(to bottom, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
-  box-shadow: inset 0px -10px 0 1px hsl(28deg, 71%, 45%);
+  box-shadow: inset 0px -10px 0 -1px hsl(28deg, 71%, 45%);
 }
 .chip--rock {
   border: hsl(349deg, 71%, 52%) 1px solid;
@@ -223,11 +234,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 0px 1px #bac0d3;
+  box-shadow: inset 0px 10px 0px -1px #bac0d3;
 }
 .chip--rock::after {
   background-image: linear-gradient(to bottom, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
-  box-shadow: inset 0px -10px 0 1px hsl(348deg, 80%, 37%);
+  box-shadow: inset 0px -10px 0 -1px hsl(348deg, 80%, 37%);
 }
 .chip--paper {
   border: hsl(230deg, 89%, 62%) 1px solid;
@@ -236,11 +247,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 0px 1px #bac0d3;
+  box-shadow: inset 0px 10px 0px -1px #bac0d3;
 }
 .chip--paper::after {
   background-image: linear-gradient(to bottom, hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
-  box-shadow: inset 0px -10px 0 1px hsl(228deg, 63%, 45%);
+  box-shadow: inset 0px -10px 0 -1px hsl(228deg, 63%, 45%);
 }
 .chip--lizard {
   border: hsl(261deg, 73%, 60%) 1px solid;
@@ -249,11 +260,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 0px 1px #bac0d3;
+  box-shadow: inset 0px 10px 0px -1px #bac0d3;
 }
 .chip--lizard::after {
   background-image: linear-gradient(to bottom, hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
-  box-shadow: inset 0px -10px 0 1px hsl(261deg, 51%, 44%);
+  box-shadow: inset 0px -10px 0 -1px hsl(261deg, 51%, 44%);
 }
 .chip--spock {
   border: hsl(189deg, 59%, 53%) 1px solid;
@@ -262,11 +273,11 @@ h2 {
   background-position: center;
   background-size: 42.5%;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 0px 1px #bac0d3;
+  box-shadow: inset 0px 10px 0px -1px #bac0d3;
 }
 .chip--spock::after {
   background-image: linear-gradient(to bottom, hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
-  box-shadow: inset 0px -10px 0 1px hsl(195deg, 58%, 43%);
+  box-shadow: inset 0px -10px 0 -1px hsl(195deg, 58%, 43%);
 }
 
 .selection-window > .chip:hover::before {
@@ -287,15 +298,50 @@ h2 {
   text-decoration: none;
   color: #fff;
   background-color: transparent;
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
   border: 2px solid hsl(217deg, 16%, 45%);
   padding: 1rem 4rem;
   border-radius: 10px;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsla(237deg, 85%, 5%, 0.699);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.popup .rules {
+  margin: 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
