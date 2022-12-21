@@ -10,7 +10,7 @@ body {
 .header {
     display: flex;
     width: 52%;
-    border: 2px solid hsl(217, 16%, 45%);
+    border: 3px solid hsl(217, 16%, 45%);
     border-radius: 12px;
     justify-content: space-between;
     align-items: center;
@@ -121,8 +121,12 @@ body {
 }
 
 .footer {
-    margin-top: 5.5%;
+    margin-top: 7.5rem;
     display: flex;
     width: 100%;
     justify-content: flex-end;
+
+    @media only screen and (max-width:1200px) {
+        justify-content: center;
+    }
 }

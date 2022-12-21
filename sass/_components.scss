@@ -112,6 +112,11 @@
         @include setChipShadow-L;
     }
 
+    @media only screen and (max-width:1200px) {
+        height: 20rem;
+        width: 20rem;
+    }
+
 }
 
 .selection-window>.chip {

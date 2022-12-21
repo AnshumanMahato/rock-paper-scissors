@@ -30,7 +30,7 @@ body {
 .header {
   display: flex;
   width: 52%;
-  border: 2px solid hsl(217deg, 16%, 45%);
+  border: 3px solid hsl(217deg, 16%, 45%);
   border-radius: 12px;
   justify-content: space-between;
   align-items: center;
@@ -130,10 +130,15 @@ body {
 }
 
 .footer {
-  margin-top: 5.5%;
+  margin-top: 7.5rem;
   display: flex;
   width: 100%;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 1200px) {
+  .footer {
+    justify-content: center;
+  }
 }
 
 h1 {
@@ -275,6 +280,12 @@ h3 {
 }
 .chip--scissors::after, .chip--rock::after, .chip--paper::after, .chip--lizard::after, .chip--spock::after {
   box-shadow: inset 0px -10px 0 1px rgba(10, 1, 1, 0.3);
+}
+@media only screen and (max-width: 1200px) {
+  .chip {
+    height: 20rem;
+    width: 20rem;
+  }
 }
 
 .selection-window > .chip--scissors, .selection-window > .chip--rock, .selection-window > .chip--paper, .selection-window > .chip--lizard, .selection-window > .chip--spock {
