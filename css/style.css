@@ -116,13 +116,29 @@ body {
   grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
   gap: 7rem 9rem;
 }
+@media only screen and (max-width: 600px) {
+  .result-declared {
+    grid-template-rows: [choice-start] 1fr [choice-end title-start] max-content [title-end result-start] 1fr [result-end];
+    grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
+  }
+}
 
 .title--player {
   grid-column: player-choice-start/player-choice-end;
 }
+@media only screen and (max-width: 600px) {
+  .title--player {
+    grid-row: title-start/title-end;
+  }
+}
 
 .title--opponent {
   grid-column: opponent-choice-start/opponent-choice-end;
+}
+@media only screen and (max-width: 600px) {
+  .title--opponent {
+    grid-row: title-start/title-end;
+  }
 }
 
 .choice {
@@ -144,6 +160,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .result {
+    grid-column: player-choice-start/opponent-choice-end;
+  }
 }
 
 .footer {
@@ -314,6 +335,12 @@ h3 {
   .chip {
     height: 20rem;
     width: 20rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .chip {
+    height: 12rem;
+    width: 12rem;
   }
 }
 

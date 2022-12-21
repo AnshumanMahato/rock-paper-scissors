@@ -122,6 +122,11 @@
         width: 20rem;
     }
 
+    @media only screen and (max-width:600px) {
+        height: 12rem;
+        width: 12rem;
+    }
+
 }
 
 .selection-window>.chip {
