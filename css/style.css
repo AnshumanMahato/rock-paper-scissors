@@ -130,7 +130,7 @@ body {
 }
 
 .footer {
-  margin-top: auto;
+  margin-top: 5.5%;
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -187,8 +187,8 @@ h3 {
 }
 
 .chip {
-  height: 16.5vw;
-  width: 16.5vw;
+  height: 22.539rem;
+  width: 22.539rem;
   border-radius: 50%;
   transform-style: preserve-3d;
   background-color: hsla(238deg, 48%, 15%, 0.501);
@@ -337,7 +337,7 @@ h3 {
 .popup__content {
   background-color: #fff;
   border-radius: 12px;
-  padding: 2%;
+  padding: 2.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
