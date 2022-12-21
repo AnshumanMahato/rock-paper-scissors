@@ -38,15 +38,15 @@ body {
 }
 
 .game {
-  margin: 7rem 0;
+  margin: 7rem 0 0;
   text-align: center;
 }
 
 .selection-window {
-  margin: 10rem 0 7.5rem;
+  margin: 4rem;
   background-image: url("../images/bg-pentagon.svg");
-  width: 27rem;
-  height: 27rem;
+  width: 33rem;
+  height: 33rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -130,6 +130,7 @@ body {
 }
 
 .footer {
+  margin-top: auto;
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -270,22 +271,22 @@ h3 {
   background-image: linear-gradient(to bottom, hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
 }
 .chip--scissors, .chip--rock, .chip--paper, .chip--lizard, .chip--spock {
-  box-shadow: inset 0px 10px 0px -1px #bac0d3;
+  box-shadow: inset 0px 10px 0px 1px #bac0d3;
 }
 .chip--scissors::after, .chip--rock::after, .chip--paper::after, .chip--lizard::after, .chip--spock::after {
-  box-shadow: inset 0px -10px 0 -1px rgba(30, 1, 1, 0.25);
+  box-shadow: inset 0px -10px 0 1px rgba(10, 1, 1, 0.3);
 }
 
+.selection-window > .chip--scissors, .selection-window > .chip--rock, .selection-window > .chip--paper, .selection-window > .chip--lizard, .selection-window > .chip--spock {
+  box-shadow: inset 0px 8px 0px -1px #bac0d3;
+}
+.selection-window > .chip--scissors::after, .selection-window > .chip--rock::after, .selection-window > .chip--paper::after, .selection-window > .chip--lizard::after, .selection-window > .chip--spock::after {
+  box-shadow: inset 0px -8px 0 -1px rgba(10, 1, 1, 0.3);
+}
 .selection-window > .chip:hover::before {
   visibility: visible;
   height: 200%;
   width: 200%;
-}
-.selection-window > .chip--scissors, .selection-window > .chip--rock, .selection-window > .chip--paper, .selection-window > .chip--lizard, .selection-window > .chip--spock {
-  box-shadow: inset 0px 6px 0px -2px #bac0d3;
-}
-.selection-window > .chip--scissors::after, .selection-window > .chip--rock::after, .selection-window > .chip--paper::after, .selection-window > .chip--lizard::after, .selection-window > .chip--spock::after {
-  box-shadow: inset 0px -6px 0 -2px rgba(30, 1, 1, 0.25);
 }
 
 .btn--play-again {
@@ -306,6 +307,12 @@ h3 {
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 3px;
+  transition: all 0.2s;
+}
+.btn--rules:hover, .btn--rules:active {
+  color: hsl(229deg, 25%, 31%);
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .popup {

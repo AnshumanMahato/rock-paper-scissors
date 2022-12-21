@@ -18,15 +18,15 @@ body {
 }
 
 .game {
-    margin: 7rem 0;
+    margin: 7rem 0 0;
     text-align: center;
 }
 
 .selection-window {
-    margin: 10rem 0 7.5rem;
+    margin: 4rem;
     background-image: url("../images/bg-pentagon.svg");
-    width: 27rem;
-    height: 27rem;
+    width: 33rem;
+    height: 33rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -121,6 +121,7 @@ body {
 }
 
 .footer {
+    margin-top: auto;
     display: flex;
     width: 100%;
     justify-content: flex-end;
