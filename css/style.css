@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   overflow-x: hidden;
@@ -26,6 +31,11 @@ body {
   padding: 3%;
   align-items: center;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10%;
+  }
+}
 
 .header {
   display: flex;
@@ -35,6 +45,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5% 1.5% 1.5% 2%;
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    padding: 3% 3% 3% 6%;
+    border-radius: 8px;
+  }
 }
 
 .game {
@@ -147,6 +164,12 @@ h1 {
   line-height: 0.8;
   font-weight: 700;
 }
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
 
 h2 {
   color: hsl(229deg, 25%, 31%);
@@ -189,6 +212,12 @@ h3 {
   color: hsl(217deg, 16%, 45%);
   font-size: 6rem;
   line-height: 1;
+}
+@media only screen and (max-width: 600px) {
+  .score {
+    border-radius: 6px;
+    padding: 4% 10%;
+  }
 }
 
 .chip {
