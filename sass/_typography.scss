@@ -5,8 +5,9 @@ h1 {
     font-weight: 700;
 
     @media only screen and (max-width:600px) {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 600;
+        line-height: 0.9;
     }
 }
 
@@ -18,6 +19,11 @@ h2 {
 h3 {
     font-size: 2.2rem;
     letter-spacing: 2px;
+    white-space: nowrap;
+
+    @media only screen and (max-width:600px) {
+        font-size: 1.8rem;
+    }
 }
 
 .result {
@@ -25,6 +31,10 @@ h3 {
         font-size: 5rem;
         font-weight: 700;
         letter-spacing: 2px;
+
+        @media only screen and (max-width:600px) {
+            font-size: 6.5rem;
+        }
     }
 
     button {
@@ -33,5 +43,9 @@ h3 {
         font-weight: 600;
         letter-spacing: 2px;
         color: hsl(229, 25%, 31%);
+
+        @media only screen and (max-width:600px) {
+            font-size: 2.1rem;
+        }
     }
 }

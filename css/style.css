@@ -33,7 +33,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   body {
-    padding: 10%;
+    padding: 8%;
   }
 }
 
@@ -57,6 +57,11 @@ body {
 .game {
   margin: 7rem 0 0;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .game {
+    margin: 10rem 0 0;
+  }
 }
 
 .selection-window {
@@ -118,8 +123,9 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .result-declared {
-    grid-template-rows: [choice-start] 1fr [choice-end title-start] max-content [title-end result-start] 1fr [result-end];
+    grid-template-rows: [choice-start] max-content [choice-end title-start] max-content [title-end result-start] max-content [result-end];
     grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
+    gap: 0 5rem;
   }
 }
 
@@ -154,6 +160,11 @@ body {
   grid-column: opponent-choice-start/opponent-choice-end;
   grid-row: choice-start/choice-end;
 }
+@media only screen and (max-width: 600px) {
+  .choice {
+    margin: 0 0 4rem;
+  }
+}
 
 .result {
   display: flex;
@@ -164,6 +175,7 @@ body {
 @media only screen and (max-width: 600px) {
   .result {
     grid-column: player-choice-start/opponent-choice-end;
+    margin: 10rem 0 0;
   }
 }
 
@@ -187,8 +199,9 @@ h1 {
 }
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
+    line-height: 0.9;
   }
 }
 
@@ -200,6 +213,12 @@ h2 {
 h3 {
   font-size: 2.2rem;
   letter-spacing: 2px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 1.8rem;
+  }
 }
 
 .result span {
@@ -207,12 +226,22 @@ h3 {
   font-weight: 700;
   letter-spacing: 2px;
 }
+@media only screen and (max-width: 600px) {
+  .result span {
+    font-size: 6.5rem;
+  }
+}
 .result button {
   font-family: inherit;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: hsl(229deg, 25%, 31%);
+}
+@media only screen and (max-width: 600px) {
+  .result button {
+    font-size: 2.1rem;
+  }
 }
 
 .score {
@@ -238,6 +267,14 @@ h3 {
   .score {
     border-radius: 6px;
     padding: 4% 10%;
+  }
+  .score__tag {
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+  }
+  .score__value {
+    color: hsl(217deg, 16%, 45%);
+    font-size: 6rem;
   }
 }
 
@@ -331,6 +368,14 @@ h3 {
 .chip--scissors::after, .chip--rock::after, .chip--paper::after, .chip--lizard::after, .chip--spock::after {
   box-shadow: inset 0px -10px 0 1px rgba(10, 1, 1, 0.3);
 }
+@media only screen and (max-width: 600px) {
+  .chip--scissors, .chip--rock, .chip--paper, .chip--lizard, .chip--spock {
+    box-shadow: inset 0px 5px 0px 1px #bac0d3;
+  }
+  .chip--scissors::after, .chip--rock::after, .chip--paper::after, .chip--lizard::after, .chip--spock::after {
+    box-shadow: inset 0px -5px 0 1px rgba(10, 1, 1, 0.3);
+  }
+}
 @media only screen and (max-width: 1200px) {
   .chip {
     height: 20rem;
@@ -339,8 +384,8 @@ h3 {
 }
 @media only screen and (max-width: 600px) {
   .chip {
-    height: 12rem;
-    width: 12rem;
+    height: 13rem;
+    width: 13rem;
   }
 }
 
@@ -362,6 +407,12 @@ h3 {
   display: inline-block;
   padding: 7% 25%;
   border-radius: 7px;
+}
+@media only screen and (max-width: 600px) {
+  .btn--play-again {
+    padding: 4.5% 18.5%;
+    border-radius: 10px;
+  }
 }
 
 .btn--rules, .btn--rules:link, .btn--rules:visited {
