@@ -1,7 +1,7 @@
 .score {
     display: flex;
     background-color: #fbfbfb;
-    padding: 2% 7%;
+    padding: 2.5% 7%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -10,13 +10,14 @@
     &__tag {
         color: hsl(229, 64%, 46%);
         letter-spacing: 1.5px;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     &__value {
-        color: hsl(217, 16%, 45%);
+        color: hsl(218, 15%, 31%);
         font-size: 6rem;
         line-height: 1;
+        font-weight: 700;
     }
 
     @media only screen and (max-width:600px) {
@@ -186,10 +187,10 @@
         text-decoration: none;
         color: #fff;
         background-color: transparent;
-        border: 2px solid hsl(217, 16%, 45%);
-        padding: 1rem 4rem;
+        border: 2px solid hsl(218, 24%, 75%);
+        padding: 1rem 3.5rem;
         border-radius: 10px;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 600;
         letter-spacing: 3px;
         transition: all 0.2s;
