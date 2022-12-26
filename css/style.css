@@ -67,6 +67,9 @@ body {
   .game {
     margin: 10rem 0 0rem;
     width: 100%;
+    flex-grow: 2;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 
@@ -120,6 +123,13 @@ body {
   grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
   grid-template-rows: [title-start] 1fr [title-end choice-start] 4fr [choice-end];
   gap: 7rem 15rem;
+}
+@media only screen and (max-width: 600px) {
+  .result-pending {
+    grid-template-rows: [choice-start] max-content [choice-end title-start] max-content [title-end];
+    grid-template-columns: [player-choice-start] 1fr [player-choice-end opponent-choice-start] 1fr [opponent-choice-end];
+    gap: 0 5rem;
+  }
 }
 
 .result-declared {
