@@ -65,9 +65,8 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .game {
-    margin: 10rem 0 0rem;
+    margin: 10rem 0 auto;
     width: 100%;
-    flex-grow: 2;
     align-content: flex-start;
     flex-wrap: wrap;
   }
@@ -112,6 +111,12 @@ body {
   top: 40%;
   right: 0;
   transform: translate(50%, -50%);
+}
+@media only screen and (max-width: 600px) {
+  .selection-window {
+    width: 27rem;
+    height: 27rem;
+  }
 }
 
 .result-window {
@@ -200,7 +205,6 @@ body {
   width: 100%;
   height: 1fr;
   justify-content: flex-end;
-  flex-grow: 1;
 }
 @media only screen and (max-width: 1200px) {
   .footer {
@@ -403,6 +407,14 @@ h3 {
 .selection-window > .chip--scissors::after, .selection-window > .chip--rock::after, .selection-window > .chip--paper::after, .selection-window > .chip--lizard::after, .selection-window > .chip--spock::after {
   box-shadow: inset 0px -8px 0 -1px rgba(10, 1, 1, 0.3);
 }
+@media only screen and (max-width: 600px) {
+  .selection-window > .chip--scissors, .selection-window > .chip--rock, .selection-window > .chip--paper, .selection-window > .chip--lizard, .selection-window > .chip--spock {
+    box-shadow: inset 0px 5px 0px -1px #bac0d3;
+  }
+  .selection-window > .chip--scissors::after, .selection-window > .chip--rock::after, .selection-window > .chip--paper::after, .selection-window > .chip--lizard::after, .selection-window > .chip--spock::after {
+    box-shadow: inset 0px -5px 0 -1px rgba(10, 1, 1, 0.3);
+  }
+}
 .selection-window > .chip:hover::before {
   visibility: visible;
   height: 200%;
@@ -440,6 +452,7 @@ h3 {
   .btn--rules, .btn--rules:link, .btn--rules:visited {
     font-size: 2.1rem;
     padding: 1.3rem 4.5rem;
+    margin: 11% 0;
   }
 }
 .btn--rules:hover, .btn--rules:active {

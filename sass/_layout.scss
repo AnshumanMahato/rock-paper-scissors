@@ -37,9 +37,8 @@ body {
     align-items: center;
 
     @media only screen and (max-width:600px) {
-        margin: 10rem 0 0rem;
+        margin: 10rem 0 auto;
         width: 100%;
-        flex-grow: 2;
         align-content: flex-start;
         flex-wrap: wrap;
     }
@@ -89,6 +88,11 @@ body {
             right: 0;
             transform: translate(50%, -50%);
         }
+    }
+
+    @media only screen and (max-width:600px) {
+        width: 27rem;
+        height: 27rem;
     }
 
 }
@@ -182,7 +186,6 @@ body {
     width: 100%;
     height: 1fr;
     justify-content: flex-end;
-    flex-grow: 1;
 
     @media only screen and (max-width:1200px) {
         justify-content: center;

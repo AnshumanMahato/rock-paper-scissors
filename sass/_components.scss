@@ -66,6 +66,14 @@
     &::after {
         box-shadow: inset 0px -8px 0 -1px rgba(10, 1, 1, 0.3);
     }
+
+    @media only screen and (max-width:600px) {
+        box-shadow: inset 0px 5px 0px -1px #bac0d3;
+
+        &::after {
+            box-shadow: inset 0px -5px 0 -1px rgba(10, 1, 1, 0.3);
+        }
+    }
 }
 
 // Chips
@@ -202,6 +210,7 @@
         @media only screen and (max-width:600px) {
             font-size: 2.1rem;
             padding: 1.3rem 4.5rem;
+            margin: 11% 0;
         }
     }
 
