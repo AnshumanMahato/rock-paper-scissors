@@ -24,22 +24,22 @@
   </header>
   <section class="game">
     <div class="selection-window">
-      <div class="chip chip--rock"></div>
-      <div class="chip chip--paper"></div>
-      <div class="chip chip--scissors"></div>
-      <div class="chip chip--lizard"></div>
-      <div class="chip chip--spock"></div>
+      <div class="chip chip--scissors" data-option="0"></div>
+      <div class="chip chip--paper" data-option="1"></div>
+      <div class="chip chip--rock" data-option="2"></div>
+      <div class="chip chip--lizard" data-option="3"></div>
+      <div class="chip chip--spock" data-option="4"></div>
     </div>
-    <div class="result-window result-pending" style="display: none;">
+    <div class="result-window result-pending hide">
       <h3 class="title--player">YOU PICKED</h3>
       <h3 class="title--opponent">THE HOUSE PICKED</h3>
       <div class="choice choice__player">
-        <div class="chip chip--scissors"></div>
+        <div class="chip"></div>
       </div>
       <div class="choice choice__opponent">
-        <div class="chip chip--lizard"></div>
+        <div class="chip"></div>
       </div>
-      <div class="result">
+      <div class="result hide">
         <span>YOU WIN</span>
         <button class="btn--play-again">PLAY AGAIN</button>
       </div>
