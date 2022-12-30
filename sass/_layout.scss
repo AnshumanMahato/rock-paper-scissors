@@ -53,6 +53,7 @@ body {
     background-position: center;
     background-size: 100%;
     position: relative;
+    transition: all .2s;
 
     &>.chip {
         position: absolute;
@@ -100,6 +101,7 @@ body {
 .result-window {
     display: grid;
     text-align: center;
+    transition: all .2s;
 
     // @media only screen and (max-width:600px) {
     //     width: 100%;
@@ -173,6 +175,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
 
     @media only screen and (max-width:600px) {
         grid-column: player-choice-start/opponent-choice-end;

@@ -81,6 +81,7 @@ body {
   background-position: center;
   background-size: 100%;
   position: relative;
+  transition: all 0.2s;
 }
 .selection-window > .chip {
   position: absolute;
@@ -122,6 +123,7 @@ body {
 .result-window {
   display: grid;
   text-align: center;
+  transition: all 0.2s;
 }
 
 .result-pending {
@@ -192,6 +194,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
 @media only screen and (max-width: 600px) {
   .result {
