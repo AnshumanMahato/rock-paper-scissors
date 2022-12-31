@@ -296,7 +296,8 @@
     z-index: -1;
     position: absolute;
     transition: all 2s;
-    animation: 1s infinite alternate addopacity;
+    animation: 1s infinite alternate grow;
+    transform: translate3d(-50%, -50%, -20px);
 
     &::after,
     &::before {
