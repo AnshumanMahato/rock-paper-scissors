@@ -48,7 +48,6 @@ Users should be able to:
 
 - Refactoring the CSS and JS code
 - Maintain the state of the score after refreshing the browser
-- Enabling PvP mode through websockets
 
 ## Author
 
